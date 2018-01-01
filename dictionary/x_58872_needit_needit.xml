@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="task" label="Needit" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element label="New Decimal" max_length="15" name="u_new_decimal" type="decimal"/>
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="toilet" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element label="Clogged toilet" sequence="0" value="toilet"/>
+                <element label="Squeaky bed" sequence="1" value="bed"/>
+                <element label="Funny smell" sequence="2" value="smell"/>
+            </choice>
+        </element>
+        <element label="When needed" mandatory="true" max_length="40" name="when_needed" type="glide_date_time"/>
+    </element>
+</database>
